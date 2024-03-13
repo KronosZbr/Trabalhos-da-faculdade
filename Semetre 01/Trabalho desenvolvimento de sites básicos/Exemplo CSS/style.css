@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');    
+
+#back{
+    background-color: black;
+}
+#gradient{/*ID utilizamos uma vez no código, normalemnte para algo mais especifico */
+    height: 100vh;
+    background-image:linear-gradient(to right,#000000,#808080);
+}
+.h1pricinal{
+    color: aquamarine;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 2rem;/*definir padrão em ou rem de tamanho*/
+}
+.h1-sec{
+    color: rgb(197, 38, 38);
+    font-family: 'Tilt Prism', cursive;
+    font-size: 2rem;
+   
+}
+.p-right{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    text-indent: 1.25rem;
+    line-height: 2em;
+    
+}
+.divcaixa{
+background-color: purple;
+padding: 5%;
+
+}

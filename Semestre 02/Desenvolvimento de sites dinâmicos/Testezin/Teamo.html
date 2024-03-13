@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('caminho_da_sua_imagem_da_rosa.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #333; /* Cor de fundo caso a imagem não carregue */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #mensagem {
+            font-size: 24px;
+            color: red;
+            margin-top: 50px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        #coracoes {
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff3333;
+        }
+    </style>
+</head>
+<body>
+    <div id="mensagem">
+        <p>
+            <strong>Minha princesa,</strong><br><br>
+            Em cada gesto teu, vejo a beleza que me cativa<br>
+            Um jeitinho tímido, mas que me conquista<br>
+            Como não me apaixonar por esse docinho que ti é?<br><br>
+            Me sinto o homem mais feliz do mundo,<br>
+            Por ter você ao meu lado, sempre me fazendo sorrir<br>
+            Você é a minha fonte de alegria,<br>
+            De amor e de carinho sem fim.<br><br>
+
+            Seus traços, seus olhos, tudo isso é tão lindo<br>
+            Mas é a sua essência que me faz amar você<br>
+            Seu coração tão bondoso e gentil<br>
+            Me mostra o que é o verdadeiro amor.<br><br>
+
+            Nunca se esqueça, minha deusa grega<br>
+            Que você é a mais linda e fofa de todas<br>
+            E que seu jeitinho, mesmo às vezes tímido, é o que me conquista<br>
+            E me faz amar cada vez mais.
+        </p>
+    </div>
+    <button onclick="mostrarCoracoes()">Mostrar Corações</button>
+    <div id="coracoes"></div>
+
+    <script>
+        function mostrarCoracoes() {
+            const coracoesDiv = document.getElementById("coracoes");
+            coracoesDiv.innerHTML = ""; // Limpa corações anteriores
+
+            const numCoracoes = 20; // Número de corações a serem exibidos
+
+            for (let i = 0; i < numCoracoes; i++) {
+                const coracao = document.createElement("span");
+                coracao.innerHTML = "&hearts;";
+                coracao.style.fontSize = Math.random() * 24 + 12 + "px";
+                coracao.style.color = getRandomColor();
+                coracao.style.position = "absolute";
+                coracao.style.left = Math.random() * 90 + 5 + "%";
+                coracao.style.top = Math.random() * 90 + 5 + "%";
+                coracoesDiv.appendChild(coracao);
+            }
+
+            coracoesDiv.style.display = "block";
+        }
+
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

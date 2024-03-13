@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <input type="submit">
+    <script>
+var nome = document.querySelector("input[type='text']")
+var enviar = document.querySelector("input[type='submit']")
+enviar.addEventListener("click",function(){
+    document.body.innerHTML += `
+    <h1>Boas vindas ${nome.value} </h1>
+    `  
+})
+
+
+    </script>
+
+</body>
+</html>

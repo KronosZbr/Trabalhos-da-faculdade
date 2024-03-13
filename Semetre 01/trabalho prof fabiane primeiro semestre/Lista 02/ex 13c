@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main()
+{
+    int salario, prest, tt;
+    printf("Digite o seu salario bruto: ");
+    scanf("%f", &salario);
+    printf("\n Digite a prestacao ");
+    scanf("%f", &prest);
+    tt = salario * 0.30;
+    printf("\n %0.2f", tt);
+}

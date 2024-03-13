@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Internet</title>
+    
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font: normal 18pt Arial;
+        }
+
+        p{
+            display: flex;
+            font: normal 18pt Arial;
+            background-color: rgb(245, 246, 245);
+            width: 260px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Status Internet</h1>
+    <p id="status"></p>
+    <script>
+        var statusResult = window.document.getElementById('status')
+
+if (navigator.onLine){
+    statusResult.style.color = 'green'
+    statusResult.innerText = 'Você está Conectado!'
+}else{
+    statusResult.style.color = 'red'
+    statusResult.innerText = 'Você está Offline!'
+}
+
+    </script>
+</body>
+</html>
